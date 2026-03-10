@@ -21,8 +21,7 @@ renamed as (
         total_deaths,
         total_damage__usd__original_,
         total_damage__usd__adjusted_,
-        cpi,
-        _file_name
+        cpi
 
     from source
 

@@ -1,6 +1,15 @@
 
 version: 2
 
+sources:
+  - name: safetravel
+    tables:
+      - name: Emergencytest
+      - name: Health
+      - name: earthquake
+      - name: Development_indicators
+
+
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"

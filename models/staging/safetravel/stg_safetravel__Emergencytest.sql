@@ -9,13 +9,9 @@ source as (
 renamed as (
 
     select
-        year,
+        'year' as date_year,
         country,
-        iso,
-        disaster_group,
-        disaster_subroup,
         disaster_type,
-        disaster_subtype,
         total_events,
         total_affected,
         total_deaths,

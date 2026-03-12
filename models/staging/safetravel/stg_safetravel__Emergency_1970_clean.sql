@@ -11,7 +11,7 @@ renamed as (
     select
         year,
         country,
-        disaster group,
+        disaster group as disaster_group,
         disaster type,
         total events,
         total affected,

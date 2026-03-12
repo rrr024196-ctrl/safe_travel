@@ -16,8 +16,7 @@ renamed as (
         total_events,
         total_affected,
         total_deaths,
-        total_damage__usd__adjusted_,
-        _file_name
+        total_damage__usd__adjusted_
 
     from source
 

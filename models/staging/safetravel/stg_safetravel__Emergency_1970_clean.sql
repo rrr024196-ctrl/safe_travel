@@ -11,12 +11,12 @@ renamed as (
     select
         year,
         country,
-        disaster_group,
-        disaster_type,
-        total_events,
-        total_affected,
-        total_deaths,
-        total_damage__usd__adjusted_
+        disaster group,
+        disaster type,
+        total events,
+        total affected,
+        total deaths,
+        total_damage_usd_adjusted
 
     from source
 

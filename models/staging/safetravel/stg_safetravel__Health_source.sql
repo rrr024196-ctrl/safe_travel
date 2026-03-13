@@ -11,7 +11,7 @@ renamed as (
     select
         int64_field_0,
         country,
-        year,
+        date(year,1,1) as year_date,
         disease name,
         disease category,
         prevalence rate __,

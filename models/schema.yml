@@ -7,7 +7,7 @@ sources:
       - name: earthquake
       - name: world_development_indicators
       - name : world_development_indicators_total
-      - name : safetravel-489714.safetravel.world_development_scored
+      - name : world_development_scored
       - name: emergency
       - name: Health_source
 

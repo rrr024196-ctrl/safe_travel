@@ -34,4 +34,4 @@ TRIM(SPLIT(place,",")[OFFSET(ARRAY_LENGTH(SPLIT(place,","))-1)])AS pays, depth, 
 rms as amplitude_residuals, net as seismic_network,updated, place as  human_location, type horizontalError, depthError, magError, 
 magNst as mag_nb_station , status as review_status, locationSource, magSource
 FROM {{ref("stg_safetravel__earthquake")}}
-WHERE time BETWEEN TIMESTAMP("2000-01-01")AND TIMESTAMP("2025-12-31 23:59:59")
+WHERE time BETWEEN TIMESTAMP("2000-01-01")AND TIMESTAMP("2024-12-31 23:59:59")

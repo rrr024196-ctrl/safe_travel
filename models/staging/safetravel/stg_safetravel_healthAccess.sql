@@ -12,4 +12,4 @@ WHERE year_date IN (
     DATE '2020-01-01', DATE '2010-01-01', DATE '2024-01-01'
 )
 GROUP BY country, year_date
-ORDER BY health_access_par_an DESC
+ORDER BY health_access_par_an DESC limit 15

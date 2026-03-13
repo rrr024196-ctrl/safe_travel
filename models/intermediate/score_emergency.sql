@@ -3,14 +3,14 @@ WITH base_impact AS (
 SELECT
 *,
 (tot_deaths * 0.5) + (tot_affected * 0.3) + (damage_usd * 0.2) AS sib
-FROM {{ ref('stg_safetravel_emergency') }}
+FROM {{ ref('stg_safetravel__emergency') }}
 ),
 
 normalized_impact AS (
 -- Étape 2 : Normalisation du SIB entre 0 et 1
 SELECT
 *,
-(sib - MIN(sib) OVER()) / NULLIF(MAX(sib) OVER() - MIN(sib) OVER(), 0) AS sib_n
+ROUND((sib - MIN(sib) OVER()) / NULLIF(MAX(sib) OVER() - MIN(sib) OVER(), 0),2) AS sib_n
 FROM base_impact
 ),
 

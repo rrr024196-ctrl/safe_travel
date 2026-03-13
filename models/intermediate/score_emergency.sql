@@ -27,5 +27,5 @@ risk_calculation AS (
 -- Cette méthode garantit une répartition parfaite sur toute l'échelle
 SELECT 
     *,
-    1 + 4 * PERCENT_RANK() OVER(ORDER BY rs) AS final_score
+    ROUND(1 + 4 * PERCENT_RANK() OVER(ORDER BY rs),2) AS final_score
 FROM risk_calculation

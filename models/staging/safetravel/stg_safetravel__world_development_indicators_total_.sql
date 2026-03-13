@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('safetravel', 'world_development_indicators_total') }}
+    select * from {{ source('safetravel', 'world_development_indicators_total_') }}
 
 ),
 

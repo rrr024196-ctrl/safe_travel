@@ -7,7 +7,7 @@ sources:
       - name: earthquake
       - name: world_development_indicators
       - name : world_development_indicators_total
-      - name : world_development_scored_
+      - name : world_development_scores
       - name: emergency
       - name: Health_source
 

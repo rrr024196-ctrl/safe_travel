@@ -1,5 +1,3 @@
-create or replace table `project.dataset.final_risk_scoring` as
-
 with base as (
   select
     r.country,
@@ -10,10 +8,10 @@ with base as (
     e.final_score,
 
     (coalesce(r.indice_exposition, 0) + coalesce(r.indice_economie, 0)) as score_structurel
-  from {{ ref('stg_safetravel__world_development_scored_') }} as r
-  left join {{ ref('score_emergency') }} as e
+  from `{{ ref('stg_safetravel__world_development_scored_') }}` as r
+  left join {{ ref('stg_safetravel__emergency') }} as e
     on r.country = e.country
-   and r.year = e.year
+    and r.year = e.year
 ),
 
 scored as (

@@ -8,9 +8,6 @@ sources:
       - name: world_development_indicators
       - name : world_development_indicators_total
       - name : world_development_scored
-      - name : world_development_indicators_total_
-      - name : world_development_scored_
-  
       - name: emergency
       - name: Health_source
 

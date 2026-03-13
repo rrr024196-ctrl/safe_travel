@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: safetravel
     tables:
-      - name: Emergency_1970_clean
       - name: Health
       - name: earthquake
       - name: world_development_indicators
+      - name: emergency

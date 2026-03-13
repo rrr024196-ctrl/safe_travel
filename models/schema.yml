@@ -4,9 +4,8 @@ version: 2
 sources:
   - name: safetravel
     tables:
-      - name: Emergencytest
-      - name: Health
       - name: earthquake
       - name: world_development_indicators
+      - name: emergency
       - name: Health_source
 

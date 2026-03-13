@@ -1,5 +1,5 @@
 SELECT 
-    country_code, 
+    country
     -- Calcul de la moyenne pondérée
     ROUND(SUM(final_score * rs) / NULLIF(SUM(rs), 0), 2) AS global_country_score,
     -- Nombre total d'événements par pays

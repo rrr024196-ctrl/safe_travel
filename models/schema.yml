@@ -1,9 +1,19 @@
+
 version: 2
 
 sources:
   - name: safetravel
     tables:
+<<<<<<< HEAD
       - name: Health
       - name: earthquake
       - name: world_development_indicators
       - name: emergency
+=======
+      - name: Emergencytest
+      - name: Health
+      - name: earthquake
+      - name: world_development_indicators
+      - name: Health_source
+
+>>>>>>> fdd137c799270b4581e76e6ebdf6d3c6e6ceb3ba

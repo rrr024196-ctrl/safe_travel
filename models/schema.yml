@@ -6,9 +6,9 @@ sources:
     tables:
       - name: earthquake
       - name: world_development_indicators
-      - name: world_over_indicator
-      - name : world_indicators_scores
-      - name : world_indicator_short
+      - name: world_development_over
+      - name : world_development_short
+      - name : world_development_scores
       - name: emergency
       - name: Health_source
 

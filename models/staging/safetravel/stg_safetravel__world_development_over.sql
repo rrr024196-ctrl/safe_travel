@@ -10,7 +10,7 @@ renamed as (
 
     select
         country,
-        year,
+        EXTRACT (YEAR from year) as year,
         access_to_electricity_pct_of_population,
         access_to_electricity_rural_pct_of_rural_population,
         access_to_electricity_urban_pct_of_urban_population,

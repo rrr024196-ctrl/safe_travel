@@ -3,16 +3,15 @@ with base as (
 select
     r.country,
     r.year,
-    e.didsater,
+    e.disaster,
     r.indice_exposition,
     r.indice_economie,
     r.indice_resilience,
     r.indice_structurel,
+    e.sib_n, 
     e.rs as indice_risk_cata,
     e.final_score as classe_risk_cata,
 
-    coalesce(r.indice_exposition,0)
-    + coalesce(r.indice_economie,0) as indice_structurel_2
 
 from {{ ref('stg_safetravel__world_development_scores') }} r
 left join {{ ref('score_emergency') }} e
@@ -43,11 +42,11 @@ from base
 select
     country,
     year,
+    disaster,
     indice_exposition,
     indice_economie,
     indice_resilience,
     indice_structurel,
-    indice_structurel_2
     classe_structurale,
     classe_resilience,
     classe_risk_cata,

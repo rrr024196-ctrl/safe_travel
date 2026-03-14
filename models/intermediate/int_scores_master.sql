@@ -3,6 +3,7 @@ with base as (
 select
     r.country,
     r.year,
+    e.didsater,
     r.indice_exposition,
     r.indice_economie,
     r.indice_resilience,
@@ -13,10 +14,10 @@ select
     coalesce(r.indice_exposition,0)
     + coalesce(r.indice_economie,0) as indice_structurel_2
 
-from {{ ref ('stg_safetravel__world_development_scores') }} r
-left join {{ ref('score_emergency') }} e
+from {{ ref('stg_safetravel__world_development_scores') }} r
+left join {{ ref('score_emergency.sql') }} e
 on r.country = e.country
-and r.year = e.year
+and r.year (cast ) = e.year
 
 ),
 

@@ -8,13 +8,13 @@ select
     r.indice_resilience,
     r.indice_structurel,
     e.rs as indice_risk_cata,
-    e.final_score as class_risk_cata,
+    e.final_score as classe_risk_cata,
 
     coalesce(r.indice_exposition,0)
     + coalesce(r.indice_economie,0) as indice_structurel_2
 
 from {{ ref ('stg_safetravel__world_development_scores') }} r
-left join {{ ref('stg_safetravel__emergency') }} e
+left join {{ ref('score_emergency') }} e
 on r.country = e.country
 and r.year = e.year
 
@@ -49,7 +49,7 @@ select
     indice_structurel_2
     classe_structurale,
     classe_resilience,
-    external_risk_score,
+    classe_risk_cata,
 
 case classe_structurale
     when 1 then 'A'
@@ -59,7 +59,7 @@ case classe_structurale
     when 5 then 'E'
 end as lettre_structurale,
 
-case external_risk_score
+case classe_risk_cata
     when 1 then 'vert'
     when 2 then 'jaune'
     when 3 then 'orange'
@@ -77,7 +77,7 @@ concat(
     end,
     cast(classe_resilience as string),
     ' ',
-    case external_risk_score
+    case classe_risk_cata
         when 1 then 'vert'
         when 2 then 'jaune'
         when 3 then 'orange'

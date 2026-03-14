@@ -59,4 +59,4 @@ renamed as (
 
 )
 
-select * from renamed
+select *  from renamed

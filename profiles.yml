@@ -1,0 +1,12 @@
+safe_travel:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: safetravel-489714
+      dataset: dbt_nmouchon
+      threads: 4
+      timeout_seconds: 300
+      location: EU
+      priority: interactive

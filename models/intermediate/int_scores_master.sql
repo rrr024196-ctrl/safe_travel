@@ -1,20 +1,19 @@
 with base as (
 
-select
-    r.country,
-    r.year,
-    e.disaster,
-    r.indice_exposition,
-    r.indice_economie,
-    r.indice_resilience,
-    r.indice_structurel,
-    e.sib_n, 
-    e.rs as indice_risk_cata,
-    e.final_score as classe_risk_cata,
+select r.country,
+        r.year,
+        e.disaster,
+        r.indice_exposition,
+        r.indice_economie,
+        r.indice_resilience,
+        r.indice_structurel,
+        e.sib_n, 
+        e.rs as indice_risk_cata,
+        e.final_score as classe_risk_cata,
 
 
-from {{ ref('stg_safetravel__world_development_scores') }} r
-left join {{ ref('score_emergency') }} e
+from {{ ref('stg_safetravel__world_development_scores') }} as r
+left join {{ ref('score_emergency') }} as e
 on r.country = e.country
 and r.year = e.year
 

@@ -59,4 +59,4 @@ renamed as (
 
 )
 
-select *  from renamed
+select count (distinct country)  from renamed

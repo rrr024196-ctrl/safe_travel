@@ -9,9 +9,9 @@ source as (
 renamed as (
 
     select
-        'annee' as annee_catastrophe,
+        `annee` as annee_catastrophe,
         pays,
-        phenomene,
+        `phenomene`,
         catastrophe_naturelle,
         total_evenements,
         total_population_affectee,

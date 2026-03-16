@@ -9,14 +9,14 @@ source as (
 renamed as (
 
     select
-        "année" AS "année_catastrophe",
+        'annee' as annee_catastrophe,
         pays,
-        phénomène,
+        phenomene,
         catastrophe_naturelle,
-        total_évènements,
-        total_population_affectée,
+        total_evenements,
+        total_population_affectee,
         total_morts,
-        coût_dollars
+        cout_dollars
 
     from source
 

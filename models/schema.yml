@@ -1,11 +1,22 @@
-
 version: 2
 
 sources:
   - name: safetravel
+    database: safetravel-489714
+    schema: safetravel
     tables:
       - name: earthquake
+        description: "Raw earthquake data"
       - name: world_development_indicators
+        description: "Raw world development indicators"
+      - name: world_development_over
+        description: "Raw aggregated world development dataset"
+      - name: world_development_short
+        description: "Short version of world development dataset"
+      - name: world_development_scores
+        description: "Calculated world development risk scores"
       - name: emergency
+        description: "Emergency external risk data"
       - name: Health_source
+        description: "Health-related source data"
 

@@ -1,0 +1,4 @@
+select *
+
+from {{ ref('stg_safetravel__world_development_scores') }} as r
+left join  {{ ref('score_emergency') }} as e

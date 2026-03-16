@@ -9,7 +9,7 @@ source as (
 renamed as (
 
     select
-        année,
+        "année" AS "année_catastrophe",
         pays,
         phénomène,
         catastrophe_naturelle,
